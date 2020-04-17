@@ -1,3 +1,3 @@
 "# bartvanhoey-JaLuPokemonRepo" 
 
-Repo van Jakob en Lukas
+Repo van Jakob en Lukas!
