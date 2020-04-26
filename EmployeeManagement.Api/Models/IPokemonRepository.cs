@@ -12,5 +12,6 @@ namespace JaLuPokemon.Api.Models
         Task<Pokemon> AddPokemon(Pokemon pokemon);
         Task<Pokemon> UpdatePokemon(Pokemon pokemon);
         Task<Pokemon> DeletePokemon(int pokemonId);
+        Task<IEnumerable<Pokemon>> Search(string name, bool? legendary);
     }
 }
