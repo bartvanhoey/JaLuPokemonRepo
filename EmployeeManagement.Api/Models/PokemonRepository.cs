@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using JaLuPokemon.Models;
 using Microsoft.EntityFrameworkCore;
@@ -78,6 +79,23 @@ namespace JaLuPokemon.Api.Models
         {
             return await _dbContext.Pokemons
                 .FirstOrDefaultAsync(e => e.Name == name);
+        }
+
+        public async Task<IEnumerable<Pokemon>> Search(string name, bool? legendary)
+        {
+            IQueryable<Pokemon> query = _dbContext.Pokemons;
+
+            if (!string.IsNullOrEmpty(name))
+            {
+                query = query.Where(e => e.Name.Contains(name));
+            }
+
+            if (legendary != null)
+            {
+                query = query.Where(e => e.Legendary == legendary);
+            }
+
+            return await query.ToListAsync();
         }
     }
 }
