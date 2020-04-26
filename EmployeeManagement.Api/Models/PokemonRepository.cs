@@ -60,7 +60,7 @@ namespace JaLuPokemon.Api.Models
             return null;
         }
 
-        public async void DeletePokemon(int pokemonId)
+        public async Task<Pokemon> DeletePokemon(int pokemonId)
         {
             var result = await _dbContext.Pokemons
                 .FirstOrDefaultAsync(e => e.PokemonId == pokemonId);
@@ -68,7 +68,16 @@ namespace JaLuPokemon.Api.Models
             {
                 _dbContext.Pokemons.Remove(result);
                 await _dbContext.SaveChangesAsync();
+                return result;
             }
+
+            return null;
+        }
+
+        public async Task<Pokemon> GetPokemonByName(string name)
+        {
+            return await _dbContext.Pokemons
+                .FirstOrDefaultAsync(e => e.Name == name);
         }
     }
 }
