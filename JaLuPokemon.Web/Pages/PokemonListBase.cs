@@ -1,5 +1,4 @@
-﻿using JaLuPokemon.API.Models;
-using JaLuPokemon.Models;
+﻿using JaLuPokemon.Models;
 using JaLuPokemon.Web.Services;
 using Microsoft.AspNetCore.Components;
 using System;
