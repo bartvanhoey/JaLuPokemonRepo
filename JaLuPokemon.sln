@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JaLuPokemon.Models", "JaLuP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JaLuPokemon.Web", "JaLuPokemon.Web\JaLuPokemon.Web.csproj", "{D6E01A2B-0EB3-43DC-AF75-26E2C0B98712}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JaLuPokemon.API", "EmployeeManagement.Api\JaLuPokemon.API.csproj", "{CE85614D-186E-4B81-8CD6-EF5A7D2425B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JaLuPokemon.API", "PokemonManagement.Api\JaLuPokemon.API.csproj", "{CE85614D-186E-4B81-8CD6-EF5A7D2425B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
