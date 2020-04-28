@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EmployeeManagement.Api\JaLuPokemon.Api.csproj" />
+    <ProjectReference Include="..\JaLuPokemon.Api\JaLuPokemon.API.csproj" />
     <ProjectReference Include="..\JaLuPokemon.Models\JaLuPokemon.Models.csproj" />
   </ItemGroup>
 

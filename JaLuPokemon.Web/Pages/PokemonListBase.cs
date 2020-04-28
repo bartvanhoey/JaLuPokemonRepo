@@ -1,10 +1,10 @@
-﻿using JaLuPokemon.Models;
+﻿using JaLuPokemon.API.Models;
+using JaLuPokemon.Models;
 using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-using JaLuPokemon.Api.Models;
 
 namespace JaLuPokemon.Web.Pages
 {

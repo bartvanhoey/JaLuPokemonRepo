@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using JaLuPokemon.Models;
 
-namespace JaLuPokemon.Api.Models
+namespace JaLuPokemon.API.Models
 {
     public interface IPokemonTypeRepository
     {

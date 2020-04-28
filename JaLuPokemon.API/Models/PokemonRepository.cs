@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using JaLuPokemon.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace JaLuPokemon.Api.Models
+namespace JaLuPokemon.API.Models
 {
     public class PokemonRepository : IPokemonRepository
     {

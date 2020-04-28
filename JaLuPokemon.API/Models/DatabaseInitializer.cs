@@ -5,7 +5,7 @@ using JaLuPokemon.Models;
 using Microsoft.EntityFrameworkCore.Internal;
 
 
-namespace JaLuPokemon.Api.Models
+namespace JaLuPokemon.API.Models
 {
     public static class DatabaseInitializer
     {
