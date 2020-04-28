@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace JaLuPokemon.Api.Migrations
+namespace JaLuPokemon.API.Migrations
 {
     public partial class initial : Migration
     {

@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using JaLuPokemon.Models;
 
-namespace JaLuPokemon.Api.Models
+namespace JaLuPokemon.API.Models
 {
     public interface IPokemonRepository
     {

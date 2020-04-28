@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using JaLuPokemon.Api.Models;
+using JaLuPokemon.API.Models;
 using JaLuPokemon.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace JaLuPokemon.Api.Controllers
+namespace JaLuPokemon.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

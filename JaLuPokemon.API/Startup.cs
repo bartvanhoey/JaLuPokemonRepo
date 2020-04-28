@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using JaLuPokemon.Api.Models;
+using JaLuPokemon.API.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,7 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace JaLuPokemon.Api
+namespace JaLuPokemon.API
 {
     public class Startup
     {
@@ -52,6 +52,7 @@ namespace JaLuPokemon.Api
             using (var scope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
                 var dbContext = scope.ServiceProvider.GetService<AppDbContext>();
+                dbContext.Database.EnsureCreated();
                 dbContext.Initialize();
             }
 

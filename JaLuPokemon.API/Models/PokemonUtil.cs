@@ -2,7 +2,7 @@
 using System.Linq;
 using JaLuPokemon.Models;
 
-namespace JaLuPokemon.Api.Models
+namespace JaLuPokemon.API.Models
 {
     public static class PokemonUtil
     {
