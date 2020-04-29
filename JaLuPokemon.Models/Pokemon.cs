@@ -43,6 +43,9 @@ namespace JaLuPokemon.Models
         public int Generation { get; set; }
         public bool Legendary { get; set; }
         public string PhotoPath { get; set; }
+
+         public PokemonType TypeOne { get; set; }
+        public PokemonType TypeTwo { get; set; }
     }
 }
 

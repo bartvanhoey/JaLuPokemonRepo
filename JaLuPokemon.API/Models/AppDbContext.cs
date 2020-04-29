@@ -19,6 +19,14 @@ namespace JaLuPokemon.API.Models
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Pokemon>().HasKey(p => p.PokemonId);
+            modelBuilder.Entity<Pokemon>()
+                         .HasOne<PokemonType>(p => p.TypeOne)
+                         .WithMany()
+                         .HasForeignKey(p => p.TypeOneId).OnDelete(DeleteBehavior.NoAction);
+            modelBuilder.Entity<Pokemon>()
+                .HasOne<PokemonType>(x => x.TypeTwo)
+                .WithMany()
+                .HasForeignKey(p => p.TypeTwoId).OnDelete(DeleteBehavior.NoAction);
             modelBuilder.Entity<PokemonType>().HasKey(p => p.PokemonTypeId);
         }
     }
