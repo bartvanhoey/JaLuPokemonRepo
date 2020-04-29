@@ -23,6 +23,8 @@ namespace JaLuPokemon.API.Models
         public async Task<Pokemon> GetPokemon(int pokemonId)
         {
             return await _dbContext.Pokemons
+                .Include(p => p.TypeOne)
+                .Include(p => p.TypeTwo)
                 .FirstOrDefaultAsync(e => e.PokemonId == pokemonId);
         }
 
