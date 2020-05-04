@@ -9,20 +9,12 @@
 }
 else
 {
+    <input type="checkbox" @bind="ShowFooter" id=showFooter>
+    <label for="showFooter">Show Footer</label>
     <div class="card-deck">
         @foreach (var pokemon in Pokemons)
         {
-            <div class="card m-3" style="min-width: 18rem; max-width:30.5%;">
-                <div class="card-header">
-                    <h5>@pokemon.Name</h5>
-                </div>
-                <img src="@pokemon.PhotoPath" alt="@pokemon.Name" class="card-img-top imageThumbnail" />
-                <div class="card-footer text-center">
-                    <a href="@($"pokemondetails/{pokemon.PokemonId}")" class="btn btn-primary" m-1>View</a>
-                    <a href="#" class="btn btn-primary" m-1>Edit</a>
-                    <a href="#" class="btn btn-danger" m-1>Delete</a>
-                </div>
-            </div>
+            <DisplayPokemon ShowFooter="ShowFooter" Pokemon="pokemon"></DisplayPokemon>
         }
     </div>
 }    

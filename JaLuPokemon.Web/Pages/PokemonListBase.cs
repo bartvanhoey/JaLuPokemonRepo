@@ -16,6 +16,7 @@ namespace JaLuPokemon.Web.Pages
 
         public IEnumerable<Pokemon> Pokemons { get; set; }
 
+        public bool ShowFooter { get; set; } = true;
         protected override async Task OnInitializedAsync()
         {
            Pokemons = (await PokemonService.GetPokemons()).ToList();
