@@ -2,6 +2,7 @@
 
 <div class="card m-3" style="min-width: 18rem; max-width:30.5%;">
     <div class="card-header">
+        <input type="checkbox" @onchange="CheckBox_Changed">
         <h5>@Pokemon.Name</h5>
     </div>
     <img src="@Pokemon.PhotoPath" alt="@Pokemon.Name" class="card-img-top imageThumbnail" />

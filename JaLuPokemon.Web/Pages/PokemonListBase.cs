@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace JaLuPokemon.Web.Pages
 {
-    public class PokemonListBase :  ComponentBase
+    public class PokemonListBase : ComponentBase
     {
         [Inject]
         public IPokemonService PokemonService { get; set; }
@@ -19,7 +19,20 @@ namespace JaLuPokemon.Web.Pages
         public bool ShowFooter { get; set; } = true;
         protected override async Task OnInitializedAsync()
         {
-           Pokemons = (await PokemonService.GetPokemons()).ToList();
+            Pokemons = (await PokemonService.GetPokemons()).ToList();
+        }
+
+        protected int SelectedPokemonsCount { get; set; }
+        protected void PokemonSelectionChanged(bool isSelected)
+        {
+            if (isSelected)
+            {
+                SelectedPokemonsCount++;
+            }
+            else
+            {
+                SelectedPokemonsCount--;
+            }
         }
     }
 }
