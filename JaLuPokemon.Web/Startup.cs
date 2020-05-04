@@ -30,7 +30,7 @@ namespace JaLuPokemon
             services.AddServerSideBlazor();
 
             services.AddHttpClient<IPokemonService, PokemonService>(client => {
-                client.BaseAddress = new Uri("https://localhost:44385/");
+                client.BaseAddress = new Uri("https://localhost:57869/");
             });
         }
 
