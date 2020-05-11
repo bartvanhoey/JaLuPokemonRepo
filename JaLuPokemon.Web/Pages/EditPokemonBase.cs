@@ -17,8 +17,6 @@ namespace JaLuPokemon.Web.Pages
 
         public List<PokemonType> PokemonTypes { get; set; } = new List<PokemonType>();
 
-        public string PokemonTypeId { get; set; }
-
         public Pokemon Pokemon { get; set; } = new Pokemon();
 
         [Parameter]
@@ -28,7 +26,6 @@ namespace JaLuPokemon.Web.Pages
         {
             Pokemon = await PokemonService.GetPokemon(int.Parse(Id));
             PokemonTypes = (await PokemonTypeService.GetPokemonTypes()).ToList();
-            PokemonTypeId = Pokemon.TypeOneId.ToString();
         }
     }
 }
