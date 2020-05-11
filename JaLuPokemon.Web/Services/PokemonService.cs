@@ -10,9 +10,8 @@ namespace JaLuPokemon.Web.Services
     {
         private readonly HttpClient _httpClient;
 
-        public PokemonService(HttpClient httpClient)
-        {
-            ._httpClient = httpClient;
+        public PokemonService(HttpClient httpClient){        
+            _httpClient = httpClient;
         }
 
         public async Task<Pokemon> GetPokemon(int id)
@@ -24,7 +23,5 @@ namespace JaLuPokemon.Web.Services
         {
             return await _httpClient.GetJsonAsync<Pokemon[]>("api/pokemons");
         }
-
-
     }
 }
