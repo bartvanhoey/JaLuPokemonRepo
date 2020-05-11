@@ -32,6 +32,10 @@ namespace JaLuPokemon
             services.AddHttpClient<IPokemonService, PokemonService>(client => {
                 client.BaseAddress = new Uri("https://localhost:57869/");
             });
+
+             services.AddHttpClient<IPokemonTypeService, PokemonTypeService>(client => {
+                client.BaseAddress = new Uri("https://localhost:57869/");
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

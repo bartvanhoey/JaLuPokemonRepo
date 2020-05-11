@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using JaLuPokemon.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace JaLuPokemon.API.Models
 {
@@ -13,15 +15,15 @@ namespace JaLuPokemon.API.Models
             _dbContext = dbContext;
         }
 
-        public PokemonType GetPokemonType(int pokemonTypeId)
+        public async Task<PokemonType> GetPokemonType(int pokemonTypeId)
         {
-            return _dbContext.PokemonTypes
-                .FirstOrDefault(d => d.PokemonTypeId == pokemonTypeId);
+            return await _dbContext.PokemonTypes
+                .FirstOrDefaultAsync(d => d.PokemonTypeId == pokemonTypeId);
         }
 
-        public IEnumerable<PokemonType> GetPokemonTypes()
+        public async Task<IEnumerable<PokemonType>> GetPokemonTypes()
         {
-            return _dbContext.PokemonTypes;
+            return await _dbContext.PokemonTypes.ToListAsync();
         }
     }
 }
