@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using JaLuPokemon.Models;
 
 namespace JaLuPokemon.API.Models
 {
     public interface IPokemonTypeRepository
     {
-        IEnumerable<PokemonType> GetPokemonTypes();
-        PokemonType GetPokemonType(int pokemonTypeId);
+        Task<IEnumerable<PokemonType>> GetPokemonTypes();
+        Task<PokemonType> GetPokemonType(int pokemonTypeId);
     }
 }
