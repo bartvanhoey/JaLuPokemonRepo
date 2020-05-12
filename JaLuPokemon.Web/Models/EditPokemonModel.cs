@@ -47,8 +47,8 @@ namespace JaLuPokemon.Web.Models
         public string ConfirmEmail { get; set; }
         public Gender Gender { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public int TypeOneId { get; set; }
-        //  public int? TypeTwoId { get; set; } throws a mapping exception
+        public int? TypeOneId { get; set; }
+         public int? TypeTwoId { get; set; } 
         public int Total { get; set; }
         public int HP { get; set; }
         public int Attack { get; set; }
@@ -59,8 +59,8 @@ namespace JaLuPokemon.Web.Models
         public int Generation { get; set; }
         public bool Legendary { get; set; }
         public string PhotoPath { get; set; }
-        // public PokemonType TypeOne { get; set; }
-        // public PokemonType TypeTwo { get; set; }
+        public PokemonType TypeOne { get; set; } = new PokemonType();
+        public PokemonType TypeTwo { get; set; } 
     }
 }
 

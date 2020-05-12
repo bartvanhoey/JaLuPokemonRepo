@@ -7,7 +7,6 @@ namespace JaLuPokemon.Models
 {
     public class Pokemon
     {
-        private string _photoPath;
         public Pokemon()
         {
 
@@ -44,7 +43,7 @@ namespace JaLuPokemon.Models
         public string Email { get; set; }
         public Gender Gender {get; set;}
         public DateTime DateOfBirth { get; set; }
-        public int TypeOneId { get; set; }
+        public int? TypeOneId { get; set; }
         public int? TypeTwoId { get; set; }
         public int Total { get; set; }
         public int HP { get; set; }

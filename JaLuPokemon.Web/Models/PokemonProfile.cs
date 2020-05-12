@@ -8,7 +8,7 @@ namespace JaLuPokemon.Web.Models
         public PokemonProfile() {
             CreateMap<Pokemon, EditPokemonModel>()
             .ForMember(dest => dest.ConfirmEmail, opt => opt.MapFrom(src => src.Email));
-            CreateMap<EditPokemonModel, Pokemon>();
+            // CreateMap<EditPokemonModel, Pokemon>();
         }
         
     }
