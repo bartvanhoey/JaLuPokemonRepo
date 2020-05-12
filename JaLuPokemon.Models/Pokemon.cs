@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using JaLuPokemon.Models.CustomValidators;
 
 namespace JaLuPokemon.Models
 {
@@ -39,6 +40,7 @@ namespace JaLuPokemon.Models
         [MinLength(2)]
         public string Name { get; set; }
         [EmailAddress]
+        [EmailDomainValidator(AllowedDomain="hotmail.com", ErrorMessage="this is a custom error message")]
         public string Email { get; set; }
         public Gender Gender {get; set;}
         public DateTime DateOfBirth { get; set; }
