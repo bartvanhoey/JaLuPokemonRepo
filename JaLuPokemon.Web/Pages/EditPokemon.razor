@@ -1,4 +1,5 @@
 @page "/editpokemon/{id}"
+@using JaLuPokemon.Models
 
 @inherits EditPokemonBase
 
@@ -36,7 +37,7 @@
             </CustomInputSelect>
         </div>
     </div>
- <div class="form-group row">
+    <div class="form-group row">
         <label for="typeTwo" class="col-sm-2 col-form-label">
             TypeTwo
         </label>
@@ -49,5 +50,17 @@
             </CustomInputSelect>
         </div>
     </div>
-
+    <div class="form-group row">
+        <label for="gender" class="col-sm-2 col-form-label">
+            Gender
+        </label>
+        <div class="col-sm-10">
+            <CustomInputSelect id="gender" @bind-Value="Pokemon.Gender" class="form-control">
+                @foreach (var gdr in Enum.GetValues(typeof(Gender)))
+                {
+                    <option value="@gdr" >@gdr</option>
+                }
+            </CustomInputSelect>
+        </div>
+    </div>
 </EditForm>

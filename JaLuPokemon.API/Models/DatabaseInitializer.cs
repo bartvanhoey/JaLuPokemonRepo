@@ -40,7 +40,7 @@ namespace JaLuPokemon.API.Models
                     var generation = int.Parse(line[11]);
                     var legendary = bool.Parse(line[12]);
 
-                    var pokemon = new Pokemon(pokemonNumber, name, name.Trim().Replace(" ", "") + "@pragimtech.com"  , type1, type2, total, hP, attack, defense,
+                    var pokemon = new Pokemon(pokemonNumber, name, name.Trim().Replace(" ", "") + "@pragimtech.com"  , Gender.Other , type1, type2, total, hP, attack, defense,
                         speedAttack, speedDefense, speed, generation, legendary);
 
                     pokemons.Add(pokemon);
