@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using JaLuPokemon.Web.Models;
 using JaLuPokemon.Web.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
@@ -28,6 +30,8 @@ namespace JaLuPokemon
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+
+            services.AddAutoMapper(typeof(PokemonProfile));
 
             services.AddHttpClient<IPokemonService, PokemonService>(client => {
                 client.BaseAddress = new Uri("https://localhost:57869/");

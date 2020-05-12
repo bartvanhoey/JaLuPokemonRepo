@@ -41,12 +41,14 @@ namespace JaLuPokemon.Web.Models
         [EmailAddress]
         [EmailDomainValidator(AllowedDomain = "hotmail.com", ErrorMessage = "this is a custom error message")]
         public string Email { get; set; }
+
+
         [CompareProperty("Email", ErrorMessage="Email and Confirm Email must match")]
         public string ConfirmEmail { get; set; }
         public Gender Gender { get; set; }
         public DateTime DateOfBirth { get; set; }
         public int TypeOneId { get; set; }
-        public int TypeTwoId { get; set; }
+        //  public int? TypeTwoId { get; set; } throws a mapping exception
         public int Total { get; set; }
         public int HP { get; set; }
         public int Attack { get; set; }
@@ -57,8 +59,8 @@ namespace JaLuPokemon.Web.Models
         public int Generation { get; set; }
         public bool Legendary { get; set; }
         public string PhotoPath { get; set; }
-        public PokemonType TypeOne { get; set; }
-        public PokemonType TypeTwo { get; set; }
+        // public PokemonType TypeOne { get; set; }
+        // public PokemonType TypeTwo { get; set; }
     }
 }
 
