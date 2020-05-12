@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components.Forms;
 
-namespace JaLuPokemon.Web.Pages
+namespace JaLuPokemon.Components
 {
     public class CustomInputSelect<TValue> : InputSelect<TValue>
     {

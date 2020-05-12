@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\JaLuPokemon.Api\JaLuPokemon.API.csproj" />
     <ProjectReference Include="..\JaLuPokemon.Models\JaLuPokemon.Models.csproj" />
+    <ProjectReference Include="..\JaLuPokemon.Components\JaLuPokemon.Components.csproj" />
   </ItemGroup>
 
 </Project>
