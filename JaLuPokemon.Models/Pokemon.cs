@@ -9,12 +9,13 @@ namespace JaLuPokemon.Models
         {
 
         }
-        public Pokemon(int pokemonNumber, string name, string email, Gender gender, int typeOneId, int typeTwoId, in int total, in int hP, in int attack, in int defense, in int speedAttack, in int speedDefense, in int speed, in int generation, in bool legendary)
+        public Pokemon(int pokemonNumber, string name, string email, Gender gender, DateTime dateOfBirth, int typeOneId, int typeTwoId, in int total, in int hP, in int attack, in int defense, in int speedAttack, in int speedDefense, in int speed, in int generation, in bool legendary)
         {
             PokemonNumber = pokemonNumber;
             Name = name;
             Email = email;
             Gender = gender;
+            DateOfBirth = dateOfBirth;
             TypeOneId = typeOneId;
             TypeTwoId = typeTwoId;
             Total = total;
@@ -35,6 +36,7 @@ namespace JaLuPokemon.Models
         public string Name { get; set; }
         public string Email { get; set; }
         public Gender Gender {get; set;}
+        public DateTime DateOfBirth { get; set; }
         public int TypeOneId { get; set; }
         public int TypeTwoId { get; set; }
         public int Total { get; set; }
