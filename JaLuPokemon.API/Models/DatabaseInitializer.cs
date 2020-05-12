@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using JaLuPokemon.Models;
-using Microsoft.EntityFrameworkCore.Internal;
-
 
 namespace JaLuPokemon.API.Models
 {
@@ -11,13 +10,16 @@ namespace JaLuPokemon.API.Models
     {
         public static void Initialize(this AppDbContext dbContext)
         {
-            if (!EnumerableExtensions.Any(dbContext.PokemonTypes))
+            var pokemonTypesCount = dbContext.PokemonTypes.ToList().Count;
+
+            if (pokemonTypesCount == 0)
             {
                 dbContext.PokemonTypes.AddRange(PokemonUtil.PokemonTypes);
                 dbContext.SaveChanges();
             }
 
-            if (!EnumerableExtensions.Any(dbContext.Pokemons))
+            var pokemonsCount = dbContext.Pokemons.ToList().Count;
+            if (pokemonsCount == 0)
             {
                 char[] seperators = { ',' };
                 var sr = new StreamReader("pokemon.csv");
@@ -40,7 +42,7 @@ namespace JaLuPokemon.API.Models
                     var generation = int.Parse(line[11]);
                     var legendary = bool.Parse(line[12]);
 
-                    var pokemon = new Pokemon(pokemonNumber, name, name.Trim().Replace(" ", "") + "@pragimtech.com", 
+                    var pokemon = new Pokemon(pokemonNumber, name, name.Trim().Replace(" ", "") + "@pragimtech.com",
                         Gender.Other, DateTime.Now, type1, type2, total, hP, attack, defense,
                         speedAttack, speedDefense, speed, generation, legendary);
 
