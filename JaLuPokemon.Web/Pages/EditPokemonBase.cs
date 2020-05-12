@@ -17,6 +17,8 @@ namespace JaLuPokemon.Web.Pages
         public IPokemonTypeService PokemonTypeService { get; set; }
         [Inject]
         public IMapper Mapper { get; set; }
+        [Inject]
+        public NavigationManager NavigationManager { get; set; }
         public List<PokemonType> PokemonTypes { get; set; } = new List<PokemonType>();
         public Pokemon Pokemon { get; set; } = new Pokemon();
         public EditPokemonModel EditPokemonModel { get; set; } = new EditPokemonModel();
@@ -30,6 +32,14 @@ namespace JaLuPokemon.Web.Pages
             Mapper.Map(Pokemon, EditPokemonModel);
         }
 
-        public void HandleValidSubmit() { }
+        public async Task HandleValidSubmit() {
+            Mapper.Map(EditPokemonModel, Pokemon);
+            var result = await PokemonService.UpdatePokemon(Pokemon);
+
+            if (result != null)
+            {
+                NavigationManager.NavigateTo("/");
+            }
+         }
     }
 }

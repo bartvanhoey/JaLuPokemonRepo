@@ -47,6 +47,8 @@ namespace JaLuPokemon.API.Models
                 result.TypeOneId = pokemon.TypeOneId;
                 result.TypeTwoId = pokemon.TypeTwoId;
                 result.Legendary = pokemon.Legendary;
+                result.Email = pokemon.Email;
+                result.Gender = pokemon.Gender;
                 result.HP = pokemon.HP;
                 result.Defense = pokemon.Defense;
                 result.Attack = pokemon.Attack;
