@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace JaLuPokemon.Models
 {
@@ -33,7 +35,10 @@ namespace JaLuPokemon.Models
 
         public int PokemonId { get; set; }
         public int PokemonNumber { get; set; }
+        [Required(ErrorMessage="First Name must be provided")]
+        [MinLength(2)]
         public string Name { get; set; }
+        [EmailAddress]
         public string Email { get; set; }
         public Gender Gender {get; set;}
         public DateTime DateOfBirth { get; set; }
