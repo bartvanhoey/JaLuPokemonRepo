@@ -23,5 +23,11 @@ namespace JaLuPokemon.Web.Services
         {
             return await _httpClient.GetJsonAsync<Pokemon[]>("api/pokemons");
         }
+
+        public async Task<Pokemon> UpdatePokemon(Pokemon pokemon)
+        {
+            return await _httpClient.PutJsonAsync<Pokemon>($"api/pokemons/{pokemon.PokemonId}", pokemon);
+        }
+
     }
 }

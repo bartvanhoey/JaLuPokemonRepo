@@ -11,7 +11,6 @@ namespace JaLuPokemon.API.Models
         public static void Initialize(this AppDbContext dbContext)
         {
             var pokemonTypesCount = dbContext.PokemonTypes.ToList().Count;
-
             if (pokemonTypesCount == 0)
             {
                 dbContext.PokemonTypes.AddRange(PokemonUtil.PokemonTypes);
